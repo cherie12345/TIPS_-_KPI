@@ -16,3 +16,10 @@
 - kerastuner.py : DNN hyperparameter optimization
 - TIPS_KPI_Predict.ipynb : predict real data
 
+
+### file 실행 순서
+
+- tran-test-generator_final.ipynb -> 여기서 생성된 데이터를 로컬에 저장
+- kerastunner.py -> 해당 파일에서 최적의 하이퍼파라미터 확인
+- DNN.py -> 최적의 파라미터를 조정 후에 DNN 실행 -> model.h5와 encoder 등의 joblib을 저장
+- TIPS_KPI_Predict.ipynb -> 자동으로 저장된 모델과 실제 데이터를 로딩하여 predict 진행
